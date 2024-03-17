@@ -1,0 +1,70 @@
+---------------------
+Tabela: Cliente
+---------------------
+- CPF (chave primária)
+- nome
+- endereço
+- telefone
+
+---------------------
+Tabela: Pedido
+---------------------
+- Valores_ID (chave estrangeira referenciando a tabela Valores)
+- Fornadas_ID (chave estrangeira referenciando a tabela Fornadas)
+- cpf (chave estrangeira referenciando a tabela Clientes)
+- data/hora
+- valor_total
+- Quant_bebidas
+- Quant_pizza
+- lista_pedidos
+
+---------------------
+Tabela: Bebida
+---------------------
+- Bebida_ID (chave primária)
+- nome
+- marca
+
+---------------------
+Tabela: Pizza
+---------------------
+- Pizza_ID (chave primária)
+- Borda_ID (chave estrangeira referenciando a tabela Borda)
+- Massa_ID (chave estrangeira referenciando a tabela Massa)
+- Sabor_ID (chave estrangeira referenciando a tabela Sabor)
+- Fornada_ID (chave estrangeira referenciando a tabela Fornada)
+- nome
+
+---------------------
+Tabela: Valor
+---------------------
+- Valor_ID (chave primária)
+- Bebidas_ID (chave estrangeira referenciando a tabela Bebidas)
+- Pizza_ID (chave estrangeira referenciando a tabela Pizza)
+- Preços
+
+---------------------
+Tabela: Fornada
+---------------------
+- Fornada_ID (chave primária)
+- Pizza_ID (chave estrangeira referenciando a tabela Pizza)
+- hora
+- data
+
+---------------------
+Tabela: Borda
+---------------------
+- id_borda (chave primária)
+- tipo
+
+---------------------
+Tabela: Massa
+---------------------
+- id_massa (chave primária)
+- tipo
+
+---------------------
+Tabela: Sabor
+---------------------
+- id_sabor (chave primária)
+- tipo
